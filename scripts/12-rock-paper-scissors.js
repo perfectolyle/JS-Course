@@ -25,9 +25,11 @@ function autoPlay(){
             updateScore();
         }, 1000);
         isAutoPlaying = true;
+        document.querySelector('.auto-play').innerHTML = 'Stop Playing';
     } else {
         clearInterval(intervalId);
         isAutoPlaying = false;
+        document.querySelector('.auto-play').innerHTML = 'Auto Play';
     }
 }
 
