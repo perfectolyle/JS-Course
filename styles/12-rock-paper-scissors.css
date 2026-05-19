@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.move-button {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: black;
+    border: 3px solid white;
+    transition: background-color 0.15s;
+}
+
+.move-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.js-moves {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.js-result {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.js-score {
+    margin-top: 20px;
+    font-size: 30px;
+}
