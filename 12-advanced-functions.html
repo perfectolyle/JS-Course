@@ -7,7 +7,24 @@
 </head>
 <body>
     
+    <button class="js-button">
+        Click
+    </button>
     <script>
+        const buttonElement = document.querySelector('.js-button');
+
+
+        const eventListener = () => {
+            console.log('click');
+        };
+
+        buttonElement.addEventListener('click', eventListener);
+
+        buttonElement.removeEventListener('click', eventListener);
+
+        buttonElement.addEventListener('click', () => {
+            console.log('cleck2');
+        });
         // function greeting(){
         //     console.log('hello');
         // }
@@ -57,13 +74,32 @@
         //     console.log('Interval');
         // }, 5000);
 
-        [
-            'make dinner',
-            'wash dishes',
-            'watch youtube',
-        ].forEach(function(value, index){
-            console.log(value, index);
-        })
+        // [
+        //     'make dinner',
+        //     'wash dishes',
+        //     'watch youtube',
+        // ].forEach((value, index) => {
+        //     if (value === 'wash dishes') {
+        //         return;
+        //     }
+        //     console.log(value, index);
+        // })
+
+        // const arrowFunction = (param, param1) => {
+        //     console.log(param + param1);
+        // };
+
+        // arrowFunction(1, 2);
+
+        // const oneParam = param => {
+        //     console.log(param + 1);
+        // };
+
+        // oneParam(2);
+
+        // const oneLine = () => 2 + 4;
+
+        // console.log(oneLine());
     </script>
 </body>
 </html>

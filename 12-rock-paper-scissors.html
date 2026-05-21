@@ -8,39 +8,28 @@
 </head>
 <body>
     <h1 class="title">Rock Paper Scissors</h1>
-    <button onclick="
-        playGame('Rock');
-        updateScore();
-    "
-    class="move-button">✊</button>
-    <button onclick="
-        playGame('Paper');
-        updateScore();
-    "
-    class="move-button">✋</button>
-    <button onclick="
-        playGame('Scissors');
-        updateScore();
-    "
-    class="move-button">✌️</button>
+    <button class="move-button js-rock-button">
+        ✊
+    </button>
+
+    <button class="move-button js-paper-button">
+        ✋
+    </button>
+
+    <button class="move-button js-scissors-button">
+        ✌️
+    </button>
     
 
     <p class="js-score"></p>
     <p class="js-moves"></p>
     <p class="js-result"></p>
 
-    <button onclick="
-        score.wins = 0;
-        score.losses = 0;
-        score.ties = 0;
-        localStorage.setItem('score', JSON.stringify(score));
-        updateScore();
-        document.querySelector('.js-moves').innerHTML = '';
-        document.querySelector('.js-result').innerHTML = '';
-    ">Reset Score</button>
-    <button onclick="
-        autoPlay();
-    " class="auto-play">
+    <button class="reset-button">
+        Reset Score
+    </button>
+    
+    <button class="auto-play">
         Auto Play
     </button>
     <script src="scripts/12-rock-paper-scissors.js"></script>

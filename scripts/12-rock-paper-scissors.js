@@ -7,19 +7,47 @@ if (!score) {
     };
 }
 
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+    playGame('Rock');
+    updateScore();
+})
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+    playGame('Paper');
+    updateScore();
+})
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+    playGame('Scissors');
+    updateScore();
+})
+
+document.querySelector('.reset-button').addEventListener('click', () => {
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.setItem('score', JSON.stringify(score));
+    updateScore();
+    document.querySelector('.js-moves').innerHTML = '';
+    document.querySelector('.js-result').innerHTML = '';
+});
+
+document.querySelector('.auto-play').addEventListener('click', () => {
+    autoPlay();
+});
+
 function autoMove(){
     const moves = ['Rock', 'Paper', 'Scissors'];
     const playerMove = moves[Math.floor(Math.random() * moves.length)];
     return playerMove;
 }
 
-
 let isAutoPlaying = false;
 let intervalId;
 
 function autoPlay(){
     if(!isAutoPlaying){
-        intervalId = setInterval(function(){
+        intervalId = setInterval(() => {
             const playerMove = autoMove();
             playGame(playerMove);
             updateScore();
